@@ -16,8 +16,8 @@ par(mfcol=c(1,1)) #reset graph area
 
 with(PowerUse_plots3, #plot scatterplot with solid line
      plot(x=Date_Time,y=Sub_metering_1,type="l",lwd=1,main="",col="black",xlab="",ylab="Energy sub metering"))
-lines(x=PowerUse_plots3$Date_Time,y=PowerUse_plots3$Sub_metering_2,type="l",lwd=1,col="red") #add second line
-lines(x=PowerUse_plots3$Date_Time,y=PowerUse_plots3$Sub_metering_3,type="l",lwd=1,col="blue") #add third line
+with(PowerUse_plots3,lines(x=Date_Time,y=Sub_metering_2,type="l",lwd=1,col="red")) #add second line
+with(PowerUse_plots3,lines(x=Date_Time,y=Sub_metering_3,type="l",lwd=1,col="blue")) #add third line
 legend(x="topright",lty=1,col=c("black","red","blue"), #add legend
        legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
 

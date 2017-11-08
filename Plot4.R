@@ -18,8 +18,8 @@ with(PowerUse_plots4,plot(x=Date_Time,y=Global_active_power,  #plot first scatte
 
 with(PowerUse_plots4, #plot second scatterplot with solid line
      plot(x=Date_Time,y=Sub_metering_1,type="l",lwd=1,main="",col="black",xlab="",ylab="Energy sub metering"))
-lines(x=PowerUse_plots4$Date_Time,y=PowerUse_plots4$Sub_metering_2,type="l",lwd=1,col="red") #add second line
-lines(x=PowerUse_plots4$Date_Time,y=PowerUse_plots4$Sub_metering_3,type="l",lwd=1,col="blue") #add third line
+with(PowerUse_plots4,lines(x=Date_Time,y=Sub_metering_2,type="l",lwd=1,col="red")) #add second line
+with(PowerUse_plots4,lines(x=Date_Time,y=Sub_metering_3,type="l",lwd=1,col="blue")) #add third line
 legend(x="topright",lty=1,box.lty=0,col=c("black","red","blue"), #add legend with no box
        legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
 
